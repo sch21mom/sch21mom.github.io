@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Матери! 💐</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Плашка внизу справа -->
+    <a href="#quest-section" class="scroll-badge" id="scrollBadge">
+        <span>Пролистай вниз</span>
+        <span class="arrow">↓</span>
+    </a>
+
+    <!-- Основной экран: Открытка -->
+    <main class="card-screen">
+        <div class="card">
+            <div class="card-badge" id="cardNumberBadge">Открытка #1</div>
+            <div class="image-wrapper">
+                <img id="cardImage" src="images/1.webp" alt="Открытка для мамы">
+            </div>
+            <h1 id="cardTitle">Самой лучшей маме на свете!</h1>
+            <p id="cardText">Спасибо за твоё тепло, заботу и бесконечную любовь. Пусть каждый твой день будет наполнен улыбками!</p>
+            
+            <div class="actions">
+                <button class="btn btn-primary" id="shareBtn">💌 Отправить маме</button>
+                <button class="btn btn-secondary" id="copyBtn">📋 Скопировать текст</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Нижний блок: Прогресс квеста -->
+    <section class="quest-section" id="quest-section">
+        <div class="quest-container">
+            <h2 id="questStatusTitle">Ты нашёл открытку!</h2>
+            <p class="quest-desc">Собери все 10 открыток по всей школе (в любом порядке) и получи сладкий подарочек для мамы!</p>
+            
+            <!-- Сетка прогресса -->
+            <div class="progress-grid" id="progressGrid">
+                <!-- Генерируется через JS -->
+            </div>
+
+            <div class="progress-text">
+                Найдено: <strong id="foundCount">1</strong> из <strong>10</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно победы -->
+    <div class="modal-overlay" id="winModal">
+        <div class="modal-content">
+            <div class="modal-icon">🎉🎁💐</div>
+            <h2>Ты нашёл все открытки!</h2>
+            <p>Поздравляем! Покажи этот экран в <strong>4 кабинете</strong> и забери подарочек для мамы.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Круто, спасибо!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
